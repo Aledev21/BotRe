@@ -29,7 +29,7 @@ embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 vector_db = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
 
 # Configurar modelo local
-model_path = "/home/alessandro/Documentos/BotRe/models/mistral-7b-instruct.Q4_K_M.gguf"
+model_path = ""
 
 llm = GPT4All(model=model_path, verbose=True)
 
@@ -49,8 +49,8 @@ async def ask_question(query: Query):
 
 # Função de raspagem
 def scrape_redesign():
-    base_url = "https://redesignconsultoria.com.br"
-    pages = ["", "/solucoes", "/quem-somos", "/contato"]
+    base_url = ""
+    pages = ["", ""]
     
     all_content = []
     
