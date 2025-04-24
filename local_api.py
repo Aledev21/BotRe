@@ -22,13 +22,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Carregar embeddings
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-# Configurar Chroma
 vector_db = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
 
-# Configurar modelo local
 model_path = ""
 
 llm = GPT4All(model=model_path, verbose=True)
@@ -47,7 +44,6 @@ async def ask_question(query: Query):
     response = qa_chain.run(query.question)
     return {"answer": response}
 
-# Função de raspagem
 def scrape_redesign():
     base_url = ""
     pages = ["", ""]
@@ -75,7 +71,6 @@ def scrape_redesign():
     
     return all_content
 
-# Salvando dados raspados
 data = scrape_redesign()
 with open("redesign_content.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False)
