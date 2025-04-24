@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+.iaia-env/
+iaia-env/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Output files
+*.sqlite3
+*.db
+*.json
+
+# Model and vector store directories
+models/
+chroma_db/
+
+# Uvicorn reload files
+*.reload
+
+# FastAPI auto-generated docs cache
+.openapi.json
+
+# Jupyter Notebook checkpoints (if used)
+.ipynb_checkpoints/
