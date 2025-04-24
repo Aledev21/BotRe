@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+requests
+beautifulsoup4
+unstructured
+langchain
+langchain-community
+gpt4all
+chromadb
+torch
+pydantic
